@@ -1,0 +1,267 @@
+
+    /* ---------- GLOBAL STYLES ---------- */
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    body{
+      background:#f7f7f7;
+      color:#222;
+    }
+    section{
+      padding:60px 7%;
+    }
+
+    /* ---------- HERO SECTION ---------- */
+   /* ------------------- NEW HERO SECTION ------------------- */
+
+.hero{
+  position: relative;
+  padding: 100px 7%;
+  min-height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #000428, #004e92);
+  color: white;
+  overflow: hidden;
+}
+
+/* Floating gradient shapes for a modern AI feel */
+.floating-shapes::before,
+.floating-shapes::after{
+  content:'';
+  position:absolute;
+  width:300px;
+  height:300px;
+  border-radius:50%;
+  background:radial-gradient(circle, #00d4ff55, #004e9233);
+  animation: float 6s ease-in-out infinite;
+}
+
+.floating-shapes::before{
+  top:-50px;
+  left:-80px;
+}
+.floating-shapes::after{
+  bottom:-60px;
+  right:-70px;
+  animation-duration: 8s;
+}
+
+@keyframes float{
+  0%{ transform:translateY(0px); }
+  50%{ transform:translateY(-20px); }
+  100%{ transform:translateY(0px); }
+}
+
+.hero-content{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  width:100%;
+  flex-wrap:wrap;
+}
+
+.hero-text{
+  flex:1;
+  min-width:280px;
+  z-index:2;
+}
+
+.hero-text h1{
+  font-size:3.2rem;
+  font-weight:800;
+  line-height:1.2;
+}
+
+.hero-text h1 span{
+  color:#00d4ff;
+}
+
+.hero-text p{
+  margin:18px 0;
+  font-size:1.15rem;
+  max-width:500px;
+  opacity:0.9;
+}
+
+/* CTA Button */
+.hero-btn{
+  background:#00d4ff;
+  color:#001;
+  font-weight:600;
+  padding:14px 30px;
+  border-radius:40px;
+  box-shadow:0 0 15px #00d4ff88;
+  transition:0.3s;
+}
+
+.hero-btn:hover{
+  background:white;
+  color:#004e92;
+  box-shadow:0 0 25px #00d4ffcc;
+  transform:translateY(-3px);
+}
+
+/* Hero Image */
+.hero-img{
+  flex:1;
+  min-width:250px;
+  display:flex;
+  justify-content:center;
+  z-index:2;
+}
+
+.hero-img img{
+  width:90%;
+  max-width:420px;
+  animation: bounce 4s infinite ease-in-out;
+}
+
+@keyframes bounce{
+  0%,100%{ transform: translateY(0px); }
+  50%{ transform: translateY(-12px); }
+}
+
+/* RESPONSIVE HERO */
+@media(max-width:768px){
+  .hero-text{
+    text-align:center;
+  }
+  .hero-text h1{
+    font-size:2.4rem;
+  }
+  .hero-content{
+    flex-direction:column-reverse;
+    text-align:center;
+  }
+  .hero-img img{
+    width:80%;
+    margin-bottom:30px;
+  }
+}
+
+    .btn{
+      padding:12px 25px;
+      background:#007bff;
+      color:white;
+      text-decoration:none;
+      border-radius:5px;
+      font-size:1.1rem;
+      display:inline-block;
+      transition:0.3s;
+    }
+    .btn:hover{
+      background:#0059c9;
+    }
+    .hero-img{
+      flex:1;
+      text-align:center;
+      min-width:300px;
+    }
+    .hero-img img{
+      width:90%;
+      max-width:450px;
+    }
+
+    /* ---------- FEATURES SECTION ---------- */
+    .features{
+      text-align:center;
+    }
+    .feature-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+      gap:25px;
+      margin-top:40px;
+    }
+    .feature-card{
+      background:white;
+      padding:25px;
+      border-radius:10px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+    .feature-card:hover{
+      transform:translateY(-6px);
+    }
+
+    /* ---------- WHY CHOOSE US ---------- */
+    .why{
+      background:#ffffff;
+    }
+    .why-list{
+      display:flex;
+      flex-direction:column;
+      gap:15px;
+      margin-top:20px;
+    }
+    .why-item{
+      background:white;
+      padding:20px;
+      border-radius:8px;
+      box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    /* ---------- ABOUT US ---------- */
+    .about{
+      background:#eef2ff;
+      border-radius:10px;
+      padding:60px 7%;
+    }
+    .about p{
+      line-height:1.7;
+      max-width:800px;
+    }
+
+    /* ---------- FORM SECTION ---------- */
+    .form-section{
+      background:white;
+      border-radius:10px;
+      padding:40px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+      max-width:600px;
+      margin:auto;
+    }
+    .form-section h2{
+      text-align:center;
+      margin-bottom:25px;
+    }
+    .form-group{
+      margin-bottom:20px;
+    }
+    .form-group label{
+      display:block;
+      font-weight:bold;
+      margin-bottom:5px;
+    }
+    .form-group input{
+      width:100%;
+      padding:12px;
+      border:1px solid #ccc;
+      border-radius:6px;
+      font-size:1rem;
+    }
+
+    /* ---------- FOOTER ---------- */
+    footer{
+      background:#000;
+      color:white;
+      text-align:center;
+      padding:25px 10px;
+      margin-top:40px;
+    }
+
+    /* ---------- RESPONSIVE ---------- */
+    @media(max-width:768px){
+      .hero{
+        text-align:center;
+        flex-direction:column-reverse;
+        padding-top:40px;
+      }
+      .hero-text h1{
+        font-size:2.4rem;
+      }
+    }
